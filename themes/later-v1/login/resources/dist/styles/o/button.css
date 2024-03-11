@@ -1,0 +1,54 @@
+.o--btn, .o--btn--lg, .o--btn--sm {
+  display: inline-block;
+  position: relative;
+  padding: .7rem 1.3rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  background: 0 0;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  border-radius: 3px;
+  user-select: none;
+  transition: background .1s ease;
+  border: none;
+}
+
+.o--btn--primary {
+  color: #fff;
+  background-color: #00ADFF;
+  box-shadow: inset 0 0 0 1px transparent;
+}
+
+.o--btn--primary.active,
+.o--btn--primary.is--active,
+.o--btn--primary:active {
+  color: #fff;
+  background-color: #0ab0ff;
+  animation: btnFlash .3s linear infinite;
+  background-image: linear-gradient(120deg,#0ab0ff 0,#00ADFF 33%,#00a6f5 66%,#00ADFF 100%);
+}
+
+.o--btn--primary:focus {
+  color: #fff;
+  background-color: #009ce6;
+  box-shadow: inset 0 0 0 1px transparent, 0 0 0 1px #fff, 0 0 0 3px rgba(0,156,230,.5);
+}
+
+.o--btn--primary:hover {
+  color: #fff;
+  background-color: #009ce6;
+  box-shadow: inset 0 0 0 1px transparent;
+}
+
+.o--btn--block {
+  display: block;
+  width: 100%;
+}
+
+.o--btn--lg {
+  padding: 1rem 2.5rem;
+  font-size: 1.15rem;
+}

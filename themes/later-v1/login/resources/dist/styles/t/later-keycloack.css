@@ -1,0 +1,67 @@
+/* LATER THEME */
+.tLK--headerContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tLK--contentContainer {
+  display: flex;
+  padding: 5rem 4rem var(--SPACER_LG);
+}
+
+/* Card */
+.tLK--card {
+  width: 450px;
+  margin: 0 1rem;
+  padding: 2rem;
+  background: #fff;
+  position: relative;
+  border: 1px solid var(--GREY);
+  border-radius: 5px;
+}
+
+.tLK--card.tLK--card--featured {
+  flex: 1;
+  width: 360px;
+  min-height: 456px;
+  background-image: url(../../img/img--featured-youtube-shorts.png);
+  background-size: cover;
+}
+
+.tLK--card__title {
+  font-size: var(--FONT_SIZE_H2);
+  line-height: 2.3rem;
+}
+
+.tLK--footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 4rem;
+}
+
+.tLK--footer__item {
+  flex: 1;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 768px) {
+  .tLK--card {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: unset;
+  }
+  .tLK--card.tLK--card--featured {
+    display: none;
+  }
+  .tLK--contentContainer {
+    padding: var(--SPACER_LG);
+  }
+}
+
+/* TABLET */
+@media only screen and (max-width: 980px) {
+  .tLK--contentContainer {
+    padding: var(--SPACER_LG);
+  }
+}

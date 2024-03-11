@@ -17,9 +17,7 @@
   <#elseif section="form">
     <#if realm.password>
       <form
-        style="display: flex;flex-direction: column;justify-content: center;align-items: center;"
         action="${url.loginAction}"
-        class="m-0 space-y-4"
         method="post"
         onsubmit="login.disabled = true; return true;"
       >
@@ -28,10 +26,11 @@
           type="hidden"
           value="<#if auth.selectedCredential?has_content>${auth.selectedCredential}</#if>"
         >
-        <div>
+        <div class="o--formWrapper--lg">
           <@inputPrimary.kw
             autocomplete=realm.loginWithEmailAllowed?string("email", "username")
             autofocus=true
+            class="o--form__input"
             disabled=usernameEditDisabled??
             invalid=["username", "password"]
             name="username"
@@ -41,7 +40,7 @@
             <@labelUsername.kw />
           </@inputPrimary.kw>
         </div>
-        <div>
+        <div class="o--formWrapper--lg">
           <@inputPrimary.kw
             invalid=["username", "password"]
             message=false
@@ -51,18 +50,18 @@
             ${msg("password")}
           </@inputPrimary.kw>
         </div>
-        <div class="flex items-center" style="display: flex; justify-between: center; align-items: center; gap: 43px;">
-          <#if realm.rememberMe && !usernameEditDisabled??>
-            <@checkboxPrimary.kw checked=login.rememberMe?? name="rememberMe">
-              ${msg("rememberMe")}
-            </@checkboxPrimary.kw>
-          </#if>
-          <#if realm.resetPasswordAllowed>
-            <@linkPrimary.kw href=url.loginResetCredentialsUrl>
-              <span class="text-sm">${msg("doForgotPassword")}</span>
-            </@linkPrimary.kw>
-          </#if>
-        </div>
+
+        <#if realm.rememberMe && !usernameEditDisabled??>
+          <@checkboxPrimary.kw checked=login.rememberMe?? name="rememberMe">
+            ${msg("rememberMe")}
+          </@checkboxPrimary.kw>
+        </#if>
+        <#if realm.resetPasswordAllowed>
+          <@linkPrimary.kw href=url.loginResetCredentialsUrl>
+            <span class="text-sm">${msg("doForgotPassword")}</span>
+          </@linkPrimary.kw>
+        </#if>
+
         <div class="pt-4" >
           <@buttonPrimary.kw name="login" type="submit">
             ${msg("doLogIn")}
@@ -75,12 +74,12 @@
     </#if>
   <#elseif section="info">
     <#if realm.password && realm.registrationAllowed && !registrationDisabled??>
-      <div>
+      <p class="u--text--center">
         ${msg("noAccount")}
         <@linkPrimary.kw href=url.registrationUrl>
           ${msg("doRegister")}
         </@linkPrimary.kw>
-      </div>
+      </p>
     </#if>
   </#if>
 </@layout.registrationLayout>

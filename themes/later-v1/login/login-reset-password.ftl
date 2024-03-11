@@ -12,9 +12,11 @@
 >
   <#if section="header">
     ${msg("emailForgotTitle")}
+  <#elseif section="info">
+    ${msg("emailInstruction")}  
   <#elseif section="form">
-    <form action="${url.loginAction}" class="m-0 space-y-4" method="post">
-      <div>
+    <form action="${url.loginAction}" method="post">
+      <div class="o--formWrapper--lg">
         <@inputPrimary.kw
           autocomplete=realm.loginWithEmailAllowed?string("email", "username")
           autofocus=true
@@ -26,14 +28,10 @@
           <@labelUsername.kw />
         </@inputPrimary.kw>
       </div>
-      <div>
-        <@buttonPrimary.kw type="submit">
-          ${msg("doSubmit")}
-        </@buttonPrimary.kw>
-      </div>
+      <@buttonPrimary.kw type="submit">
+        ${msg("doSubmit")}
+      </@buttonPrimary.kw>
     </form>
-  <#elseif section="info">
-    ${msg("emailInstruction")}
   <#elseif section="nav">
     <@linkSecondary.kw href=url.loginUrl>
       <span class="text-sm">${kcSanitize(msg("backToLogin"))?no_esc}</span>
