@@ -19,9 +19,9 @@
       <li>
         <p>${msg("loginTotpStep1")}</p>
         <ul class="list-disc pl-6 py-2 space-y-2">
-          <#list totp.policy.supportedApplications as app>
+          <#--  <#list totp.policy.supportedApplications as app> 
             <li>${app}</li>
-          </#list>
+          </#list> -->
         </ul>
       </li>
       <#if mode?? && mode = "manual">
