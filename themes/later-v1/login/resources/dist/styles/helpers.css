@@ -84,7 +84,7 @@
 
 .u--text--lg {
   font-size: var(--FONT_SIZE_LG) !important;
-  line-height: var(--FONT_SIZE_LG) * 1.35 !important;
+  line-height: calc(var(--FONT_SIZE_LG) * 1.35) !important;
 }
 
 .u--text--bold {

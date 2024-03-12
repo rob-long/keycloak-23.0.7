@@ -18,8 +18,13 @@
         <div class="tLK--card">
           <#nested>
         </div>
+        <#-- Note: Rob we need to conditionally show the below cards baed on UTM/Camapign Flow -->
+
+        <#-- Default Feature Card -->
         <#-- <div class="tLK--card tLK--card--featured"></div> -->
-        <div class="tLK--card tLK--card--testimonial">
+
+        <#-- Testimonial Feature Card -->
+        <#-- <div class="tLK--card tLK--card--testimonial">
           <p class="tLK--card__title--testimonial">
             Plan &amp; schedule posts. Drive traffic &amp; sales with Linkin.bio. Collab with creators &amp; brands.
           </p>
@@ -28,6 +33,29 @@
             <p class="u--text--bold u--m__b__0">Megan White</p>
             <p class="u--text--bold">Artifact Uprising</p>
           </div>
+        </div> -->
+
+        <#-- Campaigns Feature Card -->
+        <#-- <div class="tLK--card tLK--card--campaign">
+          <div class="u--p__l__lg u--p__r__lg">
+            <p class="tLK--card__title">OCE all socials</p>
+            <p class="u--text--light">By The Shop</p>
+            <p class="tLK--card--campaign__desc">Connect your accounts below to complete your application.</p>
+          </div>
+          <div class="tLK--card--campaign__image">
+            <figure class="o--mediaContainer">
+              <img alt="Campaign image" class="o--media" src="https://s3.amazonaws.com/mavrck-dev01-us-east-1-creator-content/activity_images/50342_1700770150866.png">
+            </figure>
+          </div>
+        </div> -->
+
+        <#-- Contributor Feature Card -->
+        <div class="tLK--card tLK--card--invite">
+          <p class="tLK--card__title u--m__b__sm u--text--bold u--text--lg">Social Media Management<br>Made Easy</p>
+          <p class="u--text--base">
+            Later is your one-stop shop for social media management &amp; expert advice.
+            <span style="color:#CF1C96;">Start wherever you are &amp; we’ll help you grow!</span>
+          </p>
         </div>
         
       </div>

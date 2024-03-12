@@ -7,8 +7,9 @@ html{
   font-smooth: auto;
   -webkit-font-smoothing: subpixel-antialiased;
   text-rendering: optimizeLegibility;
+  box-sizing: border-box;
   color: var(--TEXT_COLOR);
-  overflow-y:hidden;
+  overflow-y: hidden;
 }
 h1, h2, h3, h4, h5, h6{
   font-weight:var(--BOLD_FONT_WEIGHT);
