@@ -79,7 +79,7 @@
 
 .u--text--md {
   font-size: var(--FONT_SIZE_MD) !important;
-  line-height: var(--FONT_SIZE_MD) * 1.35 !important;
+  line-height: calc(var(--FONT_SIZE_MD) * 1.35) !important;
 }
 
 .u--text--lg {
