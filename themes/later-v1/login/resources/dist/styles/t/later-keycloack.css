@@ -91,7 +91,7 @@
   overflow: hidden;
 }
 
-.tLK--card--invite {
+.tLK--card.tLK--card--invite {
   width: 360px;
   min-height: 510px;
   padding: var(--SPACER_LG);
@@ -166,7 +166,7 @@
     padding: 0;
     border: unset;
   }
-  .tLK--card.tLK--card--testimonial, .tLK--card.tLK--card--featured, .tLK--card.tLK--card--campaign {
+  .tLK--card.tLK--card--testimonial, .tLK--card.tLK--card--featured, .tLK--card.tLK--card--campaign, .tLK--card.tLK--card--invite {
     display: none;
   }
   .tLK--contentContainer {
