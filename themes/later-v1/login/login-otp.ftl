@@ -34,7 +34,7 @@
           </#list>
         </div>
       </#if>
-      <div>
+      <div class="o--formSubmit">
         <@inputPrimary.kw
           autocomplete="off"
           autofocus=true
@@ -45,7 +45,7 @@
           <@labelTotp.kw />
         </@inputPrimary.kw>
       </div>
-      <div class="pt-4" style="display: flex;justify-content: center;align-items: center;">
+      <div class="o--formSubmit">
         <@buttonPrimary.kw
           name="submitAction"
           type="submit"

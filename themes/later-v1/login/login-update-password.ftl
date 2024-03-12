@@ -11,14 +11,18 @@
     ${msg("updatePasswordTitle")}
   <#elseif section="form">
     <form action="${url.loginAction}" class="m-0 space-y-4" method="post" >
-      <input
-        autocomplete="username"
-        name="username"
-        type="hidden"
-        value="${username}"
-      >
-      <input autocomplete="current-password" name="password" type="hidden">
-      <div>
+      <div class="o--formWrapper--lg">
+        <input
+          autocomplete="username"
+          name="username"
+          type="hidden"
+          value="${username}"
+        >
+      </div>  
+      <div class="o--formWrapper--lg">
+        <input autocomplete="current-password" name="password" type="hidden">
+      </div>
+      <div class="o--formWrapper--lg">
         <@inputPrimary.kw
           autocomplete="new-password"
           autofocus=true
@@ -30,7 +34,7 @@
           ${msg("passwordNew")}
         </@inputPrimary.kw>
       </div>
-      <div>
+      <div class="o--formWrapper--lg">
         <@inputPrimary.kw
           autocomplete="new-password"
           invalid=["password-confirm"]
@@ -43,7 +47,7 @@
 
       <#-- TODO isAppInitiatedAction -->
 
-      <div>
+      <div class="o--formSubmit">
         <@buttonPrimary.kw type="submit">
           ${msg("doSubmit")}
         </@buttonPrimary.kw>

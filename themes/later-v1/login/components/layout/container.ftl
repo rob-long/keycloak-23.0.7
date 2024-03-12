@@ -18,7 +18,18 @@
         <div class="tLK--card">
           <#nested>
         </div>
-        <div class="tLK--card tLK--card--featured"></div>
+        <#-- <div class="tLK--card tLK--card--featured"></div> -->
+        <div class="tLK--card tLK--card--testimonial">
+          <p class="tLK--card__title--testimonial">
+            Plan &amp; schedule posts. Drive traffic &amp; sales with Linkin.bio. Collab with creators &amp; brands.
+          </p>
+          <div class="tLK--card--testimonial__description u--text--center">
+            <p class="u--text--italic">“We love using Later because not only does it allow us to visually see our images laid out on a calendar week by week, but it shows us the best time to post. We wouldn’t go anywhere else to schedule and curate our social media”</p>
+            <p class="u--text--bold u--m__b__0">Megan White</p>
+            <p class="u--text--bold">Artifact Uprising</p>
+          </div>
+        </div>
+        
       </div>
   </div>
 </div>

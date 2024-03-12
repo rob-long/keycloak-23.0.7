@@ -1,5 +1,5 @@
 <#macro kw name checked=false rest...>
-  <div class="o--form__checkbox u--p__t">
+  <div class="o--form__checkbox u--m__t__md">
     <input
       <#if checked>checked</#if>
       id="${name}"

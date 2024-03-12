@@ -12,7 +12,7 @@
   <#elseif section="form">
     <form action="${url.loginAction}" class="m-0 space-y-4" method="post">
       <#if user.editUsernameAllowed>
-        <div>
+        <div class="o--formWrapper--lg">
           <@inputPrimary.kw
             autocomplete="username"
             autofocus=true
@@ -25,7 +25,7 @@
           </@inputPrimary.kw>
         </div>
       </#if>
-      <div>
+      <div class="o--formWrapper--lg">
         <@inputPrimary.kw
           autocomplete="email"
           invalid=["email"]
@@ -36,7 +36,7 @@
           ${msg("email")}
         </@inputPrimary.kw>
       </div>
-      <div>
+      <div class="o--formWrapper--lg">
         <@inputPrimary.kw
           autocomplete="given-name"
           invalid=["firstName"]
@@ -47,7 +47,7 @@
           ${msg("firstName")}
         </@inputPrimary.kw>
       </div>
-      <div>
+      <div class="o--formWrapper--lg">
         <@inputPrimary.kw
           autocomplete="family-name"
           invalid=["lastName"]
@@ -61,7 +61,7 @@
 
       <#-- TODO isAppInitiatedAction -->
 
-      <div>
+      <div class="o--formSubmit">
         <@buttonPrimary.kw type="submit">
           ${msg("doSubmit")}
         </@buttonPrimary.kw>

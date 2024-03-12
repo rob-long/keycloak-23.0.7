@@ -23,9 +23,33 @@
 .tLK--card.tLK--card--featured {
   flex: 1;
   width: 360px;
-  min-height: 456px;
-  background-image: url(../../img/img--featured-youtube-shorts.png);
+  height: 456px;
+  background-image: url(../../img/img--featured--youtube--shorts.png);
   background-size: cover;
+}
+
+.tLK--card.tLK--card--testimonial {  
+  margin: 0 var(--SPACER);
+  width: 360px;
+  min-height: 630px;
+  color: var(--TEXT_COLOR);
+  background-image: url(../../img/img--signUp--testimonial--bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.tLK--card__title--testimonial {
+  font-weight: var(--BOLD_FONT_WEIGHT);
+  font-size: var(--FONT_SIZE_LG);
+  line-height: 2.025rem;
+}
+
+.tLK--card--testimonial__description {
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  padding: 0 calc(var(--SPACER) * 2) calc(var(--SPACER) * 2) 0;
 }
 
 .tLK--card__title {
@@ -43,6 +67,52 @@
   flex: 1;
 }
 
+/* List */
+.tLK--listWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.tLK--list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--SPACER_MD) var(--SPACER);
+  border: 1px solid var(--GREY);
+  border-radius: var(--BORDER_RADIUS_LG);
+  outline: none;
+  background: #fff;
+  transition: ease 0.3s;
+}
+
+.tLK--list:hover {
+  background: var(--BG_COLOR);
+}
+
+.tLK--list:nth-child(even) {
+  border-radius: 0 0 var(--BORDER_RADIUS_LG) var(--BORDER_RADIUS_LG);
+}
+
+.tLK--list:nth-child(odd) {
+  border-radius: var(--BORDER_RADIUS_LG) var(--BORDER_RADIUS_LG) 0 0;
+}
+
+.tLK--list__item {
+  /* flex: 1; */
+  text-align: left;
+}
+
+.tLK--list__title {
+  font-size: var(--FONT_SIZE_MD);
+  font-weight: var(--BOLD_FONT_WEIGHT);
+}
+
+.tLK--list__text {
+  padding-top: calc(var(--SPACER_XS)/2);
+  font-size: var(--BASE_FONT_SIZE);
+  color: var(--TEXT_LIGHT);
+}
+
 /* MOBILE */
 @media only screen and (max-width: 768px) {
   .tLK--card {
@@ -51,7 +121,7 @@
     padding: 0;
     border: unset;
   }
-  .tLK--card.tLK--card--featured {
+  .tLK--card.tLK--card--testimonial, .tLK--card.tLK--card--featured {
     display: none;
   }
   .tLK--contentContainer {

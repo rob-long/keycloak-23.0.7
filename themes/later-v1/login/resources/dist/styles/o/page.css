@@ -60,7 +60,26 @@
 
 /* MOBILE */
 @media only screen and (max-width: 768px) {
-
+  .o--header__action {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--FONT_SIZE);
+  }
+  .o--logo {
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+  }
+  .o--logo__img{ 
+    width: 40px;
+    height: 27px;
+    background: url(../../img/img--logo--sprite.svg) no-repeat 0px -87px;
+  }
+  .o--logo__title {
+    display: flex;
+    align-items: center;
+    padding-left: var(--SPACER);
+  }
 }
 
 /* TABLET */

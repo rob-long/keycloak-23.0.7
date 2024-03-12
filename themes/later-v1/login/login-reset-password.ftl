@@ -28,9 +28,11 @@
           <@labelUsername.kw />
         </@inputPrimary.kw>
       </div>
-      <@buttonPrimary.kw type="submit">
-        ${msg("doSubmit")}
-      </@buttonPrimary.kw>
+      <div class="o--formSubmit">
+        <@buttonPrimary.kw type="submit">
+          ${msg("doSubmit")}
+        </@buttonPrimary.kw>
+      </div>
     </form>
   <#elseif section="nav">
     <@linkSecondary.kw href=url.loginUrl>

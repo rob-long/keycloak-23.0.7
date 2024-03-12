@@ -64,7 +64,7 @@
       <li>${msg("loginTotpStep3DeviceName")}</li>
     </ol>
     <form action="${url.loginAction}" class="m-0 space-y-4" method="post" >
-      <div>
+      <div class="o--formSubmit">
         <@inputPrimary.kw
           autocomplete="off"
           autofocus=true
@@ -80,7 +80,7 @@
           <input name="mode" type="hidden" value="${mode}">
         </#if>
       </div>
-      <div>
+      <div class="o--formSubmit">
         <@inputPrimary.kw
           autocomplete="off"
           invalid=["userLabel"]
