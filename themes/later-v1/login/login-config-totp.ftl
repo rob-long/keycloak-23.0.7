@@ -92,7 +92,7 @@
         </@inputPrimary.kw>
       </div>
       <#if isAppInitiatedAction??>
-        <div class="flex flex-col pt-4 space-y-2">
+        <div class="o--formSubmit">
           <@buttonPrimary.kw type="submit">
             ${msg("doSubmit")}
           </@buttonPrimary.kw>
@@ -102,7 +102,7 @@
           </@buttonSecondary.kw>
         </div>
       <#else>
-        <div class="pt-4" style="display: flex;justify-content: center;align-items: center;">
+        <div class="o--formSubmit">
           <@buttonPrimary.kw type="submit">
             ${msg("doSubmit")}
           </@buttonPrimary.kw>
