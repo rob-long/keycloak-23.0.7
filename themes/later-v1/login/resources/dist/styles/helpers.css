@@ -139,6 +139,44 @@
   text-align: center !important;
 }
 
+/* Layout */
+.u--row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.u--row--column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.u--ellipsis {
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  vertical-align: top;
+}
+
+.u--ellipsis a,
+.u--ellipsis p,
+.u--ellipsis h1,
+.u--ellipsis h2,
+.u--ellipsis h3,
+.u--ellipsis h4,
+.u--ellipsis h5,
+.u--ellipsis h6 {
+  display: inline;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
 /* Spacing */
 .u--p {
   padding: var(--SPACER) !important;

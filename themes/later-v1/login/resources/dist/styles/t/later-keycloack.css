@@ -23,6 +23,7 @@
 .tLK--card__title {
   font-size: var(--FONT_SIZE_H2);
   line-height: 2.3rem;
+  margin-top: var(--SPACER_XS);
 }
 
 .tLK--card.tLK--card--featured {
@@ -101,6 +102,23 @@
   background-size: cover;
 }
 
+.tLK--card__icon {
+  position: absolute;
+  left: 0;
+  top: -3.5rem;
+  color: var(--GREY);
+}
+
+.tLK--card__icon svg, .tLK--card__icon a, .tLK--card__icon a svg {
+  width: calc(var(--SPACER_LG) + var(--SPACER_XS));
+  height: calc(var(--SPACER_LG) + var(--SPACER_XS));
+  transition: ease 0.21s;
+}
+
+.tLK--card__icon a:hover, .tLK--card__icon a:hover svg {
+  color: var(--GREY_DARK);
+}
+
 /* Footer */
 .tLK--footer {
   display: flex;
@@ -166,7 +184,7 @@
     padding: 0;
     border: unset;
   }
-  .tLK--card.tLK--card--testimonial, .tLK--card.tLK--card--featured, .tLK--card.tLK--card--campaign, .tLK--card.tLK--card--invite {
+  .tLK--card.tLK--card--testimonial, .tLK--card.tLK--card--featured, .tLK--card.tLK--card--campaign, .tLK--card.tLK--card--invite, .tLK--card__icon {
     display: none;
   }
   .tLK--contentContainer {

@@ -1,15 +1,17 @@
-<#import "../icon/external-link.ftl" as iconExternalLink>
+<#import "../icon/arrow-left-circle.ftl" as iconArrowLeftCircle>
 <#import "../link/primary.ftl" as linkPrimary>
 
 <#macro kw>
   <#nested "show-username">
-  <div class="flex items-center justify-center mb-4 space-x-2">
-    <b>${auth.attemptedUsername}</b>
-    <@linkPrimary.kw
-      href="${url.loginRestartFlowUrl}"
-      title="${msg('restartLoginTooltip')}"
-    >
-      <@iconExternalLink.kw />
-    </@linkPrimary.kw>
-  </div>
+  <h1 class="tLK--card__title u--m__b__xs u--ellipsis">
+    Hi, ${auth.attemptedUsername}
+    <div class="tLK--card__icon">
+      <@linkPrimary.kw
+        href="${url.loginRestartFlowUrl}"
+        title="${msg('restartLoginTooltip')}"
+      >
+        <@iconArrowLeftCircle.kw />
+      </@linkPrimary.kw>
+    </div>
+  </h1>
 </#macro>

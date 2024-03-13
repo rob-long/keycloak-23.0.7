@@ -8,7 +8,7 @@ label {
   display: inline-block;
   max-width: 100%;
   margin-bottom: 10px;
-  font-weight: var(--BOLD_FONT_WEIGHT);;
+  font-weight: var(--BOLD_FONT_WEIGHT);
 }
 input[type='search'] {
   box-sizing: border-box;
