@@ -63,8 +63,8 @@
       <li>${msg("loginTotpStep3")}</li>
       <li>${msg("loginTotpStep3DeviceName")}</li>
     </ol>
-    <form action="${url.loginAction}" class="m-0 space-y-4" method="post" >
-      <div class="o--formSubmit">
+    <form action="${url.loginAction}" method="post" >
+      <div class="o--formWrapper--lg">
         <@inputPrimary.kw
           autocomplete="off"
           autofocus=true
@@ -80,7 +80,7 @@
           <input name="mode" type="hidden" value="${mode}">
         </#if>
       </div>
-      <div class="o--formSubmit">
+      <div class="o--formWrapper--lg">
         <@inputPrimary.kw
           autocomplete="off"
           invalid=["userLabel"]
@@ -92,14 +92,17 @@
         </@inputPrimary.kw>
       </div>
       <#if isAppInitiatedAction??>
-        <div class="o--formSubmit">
-          <@buttonPrimary.kw type="submit">
-            ${msg("doSubmit")}
-          </@buttonPrimary.kw>
-
-          <@buttonSecondary.kw name="cancel-aia" type="submit">
-            ${msg("doCancel")}
-          </@buttonSecondary.kw>
+        <div class="o--formSubmit u--row">
+          <div class="u--row--column u--m__r__xs">
+            <@buttonPrimary.kw type="submit">
+              ${msg("doSubmit")}
+            </@buttonPrimary.kw>
+          </div>
+          <div class="u--row--column u--m__l__xs">
+            <@buttonSecondary.kw name="cancel-aia" type="submit">
+              ${msg("doCancel")}
+            </@buttonSecondary.kw>
+          </div>
         </div>
       <#else>
         <div class="o--formSubmit">
