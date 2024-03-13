@@ -57,7 +57,7 @@
           </@checkboxPrimary.kw>
         </#if>
 
-        <div class="pt-4" >
+        <div class="o--formSubmit" >
           <@buttonPrimary.kw name="login" type="submit">
             ${msg("doLogIn")}
           </@buttonPrimary.kw>

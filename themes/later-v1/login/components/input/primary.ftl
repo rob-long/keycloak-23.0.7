@@ -18,7 +18,7 @@
     </#list>
   >
   <#if message && messagesPerField.existsError(invalid)>
-    <@inputError.kw id="error" class="o--form__helpText u--text--sm u--text--danger">
+    <@inputError.kw id="error" class="o--form__helpText u--text--danger">
       ${kcSanitize(messagesPerField.getFirstError(invalid))?no_esc}
     </@inputError.kw>
   </#if>
