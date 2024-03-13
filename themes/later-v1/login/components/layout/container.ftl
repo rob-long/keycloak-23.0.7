@@ -1,14 +1,63 @@
 <#macro kw>
-  <div class=" min-h-screen sm:py-16 flex items-center justify-center items-center">
-    <div class="w-fit flex justify-center items-center w-full p-5 relative mx-auto my-auto rounded-xl bg-white" style="width: auto;padding: 49px;">
-      <div class="items-center justify-center flex space-between" style="position: relative;display: flex;height: 100%;">
-        <div class="text-center" style="display: flex;justify-content: center;">
-          <img src="https://later-frontend-assets.later.com/assets/images/img--login--YouTubeShortsGTM-e02137a74f954dbef4ead7b778a25136.webp" 
-          alt="login illustration"style="width: 70%; height:100%;">
-        </div>    
-      <div class="space-y-6 w-full ">
-       <#nested>
+  <div class="o--wrapper">
+    <header class="o--header">
+      <div class="o--container tLK--headerContainer">
+        <div class="o--logoWrapper">
+          <a href="https://later.com" class="o--logo" target="_self" rel="" title="Later.com">
+            <div class="o--logo__img"></div>    
+          </a>
+          <h3 class="o--logo__title">Log In</h3>
+        </div>
+        <h3 class="o--header__action">
+          New to Later? <a class="u--inline u--p__l__xs" href="/user/signup">Create&nbsp;an&nbsp;Account</a>
+        </h3>
       </div>
+    </header>
+    <div class="o--content">
+      <div class="o--container tLK--contentContainer">
+        <div class="tLK--card">
+          <#nested>
+        </div>
+        <#-- Note: Rob we need to conditionally show the below cards baed on UTM/Camapign Flow -->
+
+        <#-- Default Feature Card -->
+        <#-- <div class="tLK--card tLK--card--featured"></div> -->
+
+        <#-- Testimonial Feature Card -->
+        <#-- <div class="tLK--card tLK--card--testimonial">
+          <p class="tLK--card__title--testimonial">
+            Plan &amp; schedule posts. Drive traffic &amp; sales with Linkin.bio. Collab with creators &amp; brands.
+          </p>
+          <div class="tLK--card--testimonial__description u--text--center">
+            <p class="u--text--italic">“We love using Later because not only does it allow us to visually see our images laid out on a calendar week by week, but it shows us the best time to post. We wouldn’t go anywhere else to schedule and curate our social media”</p>
+            <p class="u--text--bold u--m__b__0">Megan White</p>
+            <p class="u--text--bold">Artifact Uprising</p>
+          </div>
+        </div> -->
+
+        <#-- Campaigns Feature Card -->
+        <#-- <div class="tLK--card tLK--card--campaign">
+          <div class="u--p__l__lg u--p__r__lg">
+            <p class="tLK--card__title">OCE all socials</p>
+            <p class="u--text--light">By The Shop</p>
+            <p class="tLK--card--campaign__desc">Connect your accounts below to complete your application.</p>
+          </div>
+          <div class="tLK--card--campaign__image">
+            <figure class="o--mediaContainer">
+              <img alt="Campaign image" class="o--media" src="https://s3.amazonaws.com/mavrck-dev01-us-east-1-creator-content/activity_images/50342_1700770150866.png">
+            </figure>
+          </div>
+        </div> -->
+
+        <#-- Contributor Feature Card -->
+        <div class="tLK--card tLK--card--invite">
+          <p class="tLK--card__title u--m__b__sm u--text--bold u--text--lg">Social Media Management<br>Made Easy</p>
+          <p class="u--text--base">
+            Later is your one-stop shop for social media management &amp; expert advice.
+            <span style="color:#CF1C96;">Start wherever you are &amp; we’ll help you grow!</span>
+          </p>
+        </div>
+        
       </div>
   </div>
 </div>

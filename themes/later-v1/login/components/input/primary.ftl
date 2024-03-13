@@ -7,8 +7,7 @@
     <#if disabled>disabled</#if>
     <#if required>required</#if>
     aria-invalid="${messagesPerField.existsError(invalid)?c}"
-    class="block border-gray-300 mt-1 rounded-md w-full focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 sm:text-sm"
-    style="width: 315px;"
+    class="o--form__input"
     id="${name}"
     name="${name}"
     placeholder="<#compress><#nested></#compress>"

@@ -19,9 +19,9 @@
       <li>
         <p>${msg("loginTotpStep1")}</p>
         <ul class="list-disc pl-6 py-2 space-y-2">
-          <#list totp.policy.supportedApplications as app>
+          <#--  <#list totp.policy.supportedApplications as app> 
             <li>${app}</li>
-          </#list>
+          </#list> -->
         </ul>
       </li>
       <#if mode?? && mode = "manual">
@@ -64,7 +64,7 @@
       <li>${msg("loginTotpStep3DeviceName")}</li>
     </ol>
     <form action="${url.loginAction}" class="m-0 space-y-4" method="post" >
-      <div>
+      <div class="o--formSubmit">
         <@inputPrimary.kw
           autocomplete="off"
           autofocus=true
@@ -80,7 +80,7 @@
           <input name="mode" type="hidden" value="${mode}">
         </#if>
       </div>
-      <div>
+      <div class="o--formSubmit">
         <@inputPrimary.kw
           autocomplete="off"
           invalid=["userLabel"]

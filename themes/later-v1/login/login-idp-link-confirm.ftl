@@ -6,12 +6,12 @@
     ${msg("confirmLinkIdpTitle")}
   <#elseif section="form">
     <form action="${url.loginAction}" class="m-0 space-y-4" method="post" >
-      <div>
+      <div class="o--formSubmit">
         <@buttonPrimary.kw name="submitAction" type="submit" value="updateProfile">
           ${msg("confirmLinkIdpReviewProfile")}
         </@buttonPrimary.kw>
       </div>
-      <div>
+      <div class="o--formSubmit">
         <@buttonPrimary.kw name="submitAction" type="submit" value="linkAccount">
           ${msg("confirmLinkIdpContinue", idpDisplayName)}
         </@buttonPrimary.kw>

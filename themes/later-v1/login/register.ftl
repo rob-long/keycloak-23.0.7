@@ -12,7 +12,7 @@
     ${msg("registerTitle")}
   <#elseif section="form">
     <form action="${url.registrationAction}" class="m-0 space-y-4" method="post" >
-      <div>
+      <div class="o--formWrapper--lg">
         <@inputPrimary.kw
           autocomplete="given-name"
           autofocus=true
@@ -24,7 +24,7 @@
           ${msg("firstName")}
         </@inputPrimary.kw>
       </div>
-      <div>
+      <div class="o--formWrapper--lg">
         <@inputPrimary.kw
           autocomplete="family-name"
           invalid=["lastName"]
@@ -35,7 +35,7 @@
           ${msg("lastName")}
         </@inputPrimary.kw>
       </div>
-      <div>
+      <div class="o--formWrapper--lg">
         <@inputPrimary.kw
           autocomplete="email"
           invalid=["email"]
@@ -47,7 +47,7 @@
         </@inputPrimary.kw>
       </div>
       <#if !realm.registrationEmailAsUsername>
-        <div>
+        <div class="o--formWrapper--lg">
           <@inputPrimary.kw
             autocomplete="username"
             invalid=["username"]
@@ -60,7 +60,7 @@
         </div>
       </#if>
       <#if passwordRequired??>
-        <div>
+        <div class="o--formWrapper--lg">
           <@inputPrimary.kw
             autocomplete="new-password"
             invalid=["password", "password-confirm"]
@@ -71,7 +71,7 @@
             ${msg("password")}
           </@inputPrimary.kw>
         </div>
-        <div>
+        <div class="o--formWrapper--lg">
           <@inputPrimary.kw
             autocomplete="new-password"
             invalid=["password-confirm"]
@@ -87,12 +87,15 @@
           <div class="g-recaptcha" data-sitekey="${recaptchaSiteKey}" data-size="compact"></div>
         </div>
       </#if>
-      <div>
-        <@buttonPrimary.kw type="submit">
-          ${msg("doRegister")}
-        </@buttonPrimary.kw>
-      </div>
+      <@buttonPrimary.kw type="submit">
+        ${msg("doRegister")}
+      </@buttonPrimary.kw>
     </form>
+    <footer class="u--m__t__lg">
+      <p class="u--text--center u--m__b__lg" id="kc-registration">Already have an account? <a tabindex="6" href="/realms/later/login-actions/registration?client_id=later&amp;tab_id=y_vFzf3r1xM">Log In</a></p>
+      <p class="u--text--light u--text--sm">By creating an account, you’re opting-in to receive marketing and product updates by email. You can always unsubscribe, any time.</p>
+      <p class="u--text--light u--text--sm">By creating an account you agree to our Terms and Privacy Policy</p>
+    </footer>
   <#elseif section="nav">
     <@linkSecondary.kw href=url.loginUrl>
       <span class="text-sm">${kcSanitize(msg("backToLogin"))?no_esc}</span>
