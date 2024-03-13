@@ -10,7 +10,6 @@
 <#import "components/layout/nav.ftl" as nav>
 <#import "components/layout/required-fields.ftl" as requiredFields>
 <#import "components/layout/title.ftl" as title>
-<#import "components/layout/subtitle.ftl" as subtitle>
 <#import "components/layout/username.ftl" as username>
 
 <#macro
@@ -19,6 +18,7 @@
   displayMessage=true
   displayRequiredFields=false
   showAnotherWayIfPresent=true
+  showForgotPassword=true
 >
   <html>
     <head>
@@ -30,9 +30,9 @@
           <@cardHeader.kw>
             <@title.kw />
             <#if !(auth?has_content && auth.showUsername() && !auth.showResetCredentials())>
-              <@subtitle.kw>
+              <h1 class="tLK--card__title">
                 <#nested "header">
-              </@subtitle.kw>
+              </h1>
             <#else>
               <@username.kw />
             </#if>
@@ -47,7 +47,7 @@
             </#if>
           </@cardMain.kw>
           <#if displayInfo>
-            <@cardFooter.kw auth=auth>
+            <@cardFooter.kw auth=auth showForgotPassword=showForgotPassword>
               <#nested "info">
             </@cardFooter.kw>
           </#if>

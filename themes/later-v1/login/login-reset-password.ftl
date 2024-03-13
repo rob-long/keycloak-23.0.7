@@ -6,8 +6,8 @@
 
 <@layout.registrationLayout
   displayInfo=true
-  displayMessage=!messagesPerField.existsError("username")
-  ;
+  showForgotPassword=false
+  displayMessage=!messagesPerField.existsError("username");
   section
 >
   <#if section="header">
@@ -30,13 +30,14 @@
       </div>
       <div class="o--formSubmit">
         <@buttonPrimary.kw type="submit">
-          ${msg("doSubmit")}
+          Send Email
         </@buttonPrimary.kw>
       </div>
     </form>
   <#elseif section="nav">
-    <@linkSecondary.kw href=url.loginUrl>
-      <span class="text-sm">${kcSanitize(msg("backToLogin"))?no_esc}</span>
-    </@linkSecondary.kw>
+    Already have an account?
+    <@linkSecondary.kw href=url.loginRestartFlowUrl>
+      <span class="text-sm">${kcSanitize(msg("loginAccountTitle"))?no_esc}</span>
+    </@linkSecondary.kw>   
   </#if>
 </@layout.registrationLayout>
