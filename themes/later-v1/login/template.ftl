@@ -45,12 +45,9 @@
             <#if displayRequiredFields>
               <@requiredFields.kw />
             </#if>
-            <#if auth?has_content && auth.showTryAnotherWayLink() && showAnotherWayIfPresent>
-              <@anotherWay.kw />
-            </#if>
           </@cardMain.kw>
           <#if displayInfo>
-            <@cardFooter.kw>
+            <@cardFooter.kw auth=auth>
               <#nested "info">
             </@cardFooter.kw>
           </#if>

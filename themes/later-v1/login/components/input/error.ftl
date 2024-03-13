@@ -1,5 +1,5 @@
-<#macro kw id class rest...>
-  <span id="${id}" class="${class}" aria-live="polite">
+<#macro kw class rest...>
+  <span class="${class}" aria-live="polite">
     <#nested>
   </span>
 </#macro>

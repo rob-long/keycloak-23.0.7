@@ -1,3 +1,5 @@
+<#import "./error.ftl" as inputError>
+
 <#macro kw invalid name autofocus=false disabled=false message=true required=true rest...>
   <label class="sr-only" for="${name}">
     <#nested>
@@ -7,7 +9,7 @@
     <#if disabled>disabled</#if>
     <#if required>required</#if>
     aria-invalid="${messagesPerField.existsError(invalid)?c}"
-    class="o--form__input"
+    class="o--form__input<#if messagesPerField.existsError(invalid)> hasError</#if>"
     id="${name}"
     name="${name}"
     placeholder="<#compress><#nested></#compress>"
@@ -16,8 +18,8 @@
     </#list>
   >
   <#if message && messagesPerField.existsError(invalid)>
-    <div class="mt-2 text-red-600 text-sm">
+    <@inputError.kw id="error" class="o--form__helpText u--text--sm u--text--danger">
       ${kcSanitize(messagesPerField.getFirstError(invalid))?no_esc}
-    </div>
+    </@inputError.kw>
   </#if>
 </#macro>
