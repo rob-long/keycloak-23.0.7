@@ -19,9 +19,15 @@
       <li>
         <p>${msg("loginTotpStep1")}</p>
         <ul class="list-disc pl-6 py-2 space-y-2">
-          <#--  <#list totp.policy.supportedApplications as app> 
-            <li>${app}</li>
-          </#list> -->
+          <#if totp.policy.supportedApplications??>
+              <#list totp.policy.supportedApplications as app>
+                <li>${app}</li>
+              </#list>
+            <#else>
+              <#list ["Microsoft Authenticator", "FreeOTP", "Google Authenticator"] as app>
+                <li>${app}</li>
+              </#list>
+          </#if>
         </ul>
       </li>
       <#if mode?? && mode = "manual">

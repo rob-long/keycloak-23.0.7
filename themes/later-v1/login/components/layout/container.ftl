@@ -1,4 +1,4 @@
-<#macro kw>
+<#macro kw heading="Log In">
   <div class="o--wrapper">
     <header class="o--header">
       <div class="o--container tLK--headerContainer">
@@ -6,7 +6,7 @@
           <a href="https://later.com" class="o--logo" target="_self" rel="" title="Later.com">
             <div class="o--logo__img"></div>    
           </a>
-          <h3 class="o--logo__title">Log In</h3>
+          <h3 class="o--logo__title">${heading}</h3>
         </div>
         <h3 class="o--header__action">
           New to Later? <a class="u--inline u--p__l__xs" href="/user/signup">Create&nbsp;an&nbsp;Account</a>

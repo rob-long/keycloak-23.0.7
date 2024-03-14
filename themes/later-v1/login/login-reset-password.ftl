@@ -35,9 +35,10 @@
       </div>
     </form>
   <#elseif section="nav">
-    Already have an account?
+    <span class="u--text--sm">Already have an account?
     <@linkSecondary.kw href=url.loginRestartFlowUrl>
-      <span class="text-sm">${kcSanitize(msg("loginAccountTitle"))?no_esc}</span>
-    </@linkSecondary.kw>   
+      ${kcSanitize(msg("loginAccountTitle"))?no_esc}
+    </@linkSecondary.kw>
+    </span>
   </#if>
 </@layout.registrationLayout>

@@ -17,15 +17,16 @@
   displayInfo=false
   displayMessage=true
   displayRequiredFields=false
+  heading=msg("loginAccountTitle")
   showAnotherWayIfPresent=true
   showForgotPassword=true
 >
   <html>
     <head>
-      <@document.kw />
+      <@document.kw/>
     </head>
     <body>
-      <@container.kw>
+      <@container.kw heading=heading>
         <@card.kw>
           <@cardHeader.kw>
             <@title.kw />

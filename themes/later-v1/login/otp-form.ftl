@@ -32,7 +32,7 @@
                 <input class="o--btn--lg o--btn--outline" name="resend" id="kc-resend" type="submit" value="${msg("doResend")}" />
               </div>
               <div class="u--row--column u--m__l__xs">
-                <input class="o--btn--lg o--btn--primary" name="submit" id="kc-submit" type="submit" value="${msg("doSubmit")}" />
+                <input class="o--btn--lg o--btn--primary" name="submit" id="kc-submit" type="submit" value="Log In" />
               </div>
             </div>
 
