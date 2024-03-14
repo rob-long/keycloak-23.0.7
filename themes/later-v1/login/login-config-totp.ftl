@@ -19,9 +19,15 @@
       <li>
         <p>${msg("loginTotpStep1")}</p>
         <ul class="list-disc pl-6 py-2 space-y-2">
-          <#--  <#list totp.policy.supportedApplications as app> 
-            <li>${app}</li>
-          </#list> -->
+          <#if totp.policy.supportedApplications??>
+              <#list totp.policy.supportedApplications as app>
+                <li>${app}</li>
+              </#list>
+            <#else>
+              <#list ["Microsoft Authenticator", "FreeOTP", "Google Authenticator"] as app>
+                <li>${app}</li>
+              </#list>
+          </#if>
         </ul>
       </li>
       <#if mode?? && mode = "manual">
@@ -63,8 +69,8 @@
       <li>${msg("loginTotpStep3")}</li>
       <li>${msg("loginTotpStep3DeviceName")}</li>
     </ol>
-    <form action="${url.loginAction}" class="m-0 space-y-4" method="post" >
-      <div class="o--formSubmit">
+    <form action="${url.loginAction}" method="post" >
+      <div class="o--formWrapper--lg">
         <@inputPrimary.kw
           autocomplete="off"
           autofocus=true
@@ -80,7 +86,7 @@
           <input name="mode" type="hidden" value="${mode}">
         </#if>
       </div>
-      <div class="o--formSubmit">
+      <div class="o--formWrapper--lg">
         <@inputPrimary.kw
           autocomplete="off"
           invalid=["userLabel"]
@@ -92,17 +98,20 @@
         </@inputPrimary.kw>
       </div>
       <#if isAppInitiatedAction??>
-        <div class="flex flex-col pt-4 space-y-2">
-          <@buttonPrimary.kw type="submit">
-            ${msg("doSubmit")}
-          </@buttonPrimary.kw>
-
-          <@buttonSecondary.kw name="cancel-aia" type="submit">
-            ${msg("doCancel")}
-          </@buttonSecondary.kw>
+        <div class="o--formSubmit u--row">
+          <div class="u--row--column u--m__r__xs">
+            <@buttonPrimary.kw type="submit">
+              ${msg("doSubmit")}
+            </@buttonPrimary.kw>
+          </div>
+          <div class="u--row--column u--m__l__xs">
+            <@buttonSecondary.kw name="cancel-aia" type="submit">
+              ${msg("doCancel")}
+            </@buttonSecondary.kw>
+          </div>
         </div>
       <#else>
-        <div class="pt-4" style="display: flex;justify-content: center;align-items: center;">
+        <div class="o--formSubmit">
           <@buttonPrimary.kw type="submit">
             ${msg("doSubmit")}
           </@buttonPrimary.kw>

@@ -139,6 +139,11 @@
   text-align: center !important;
 }
 
+/* Hide */
+.u--hide {
+  display: none !important;
+}
+
 /* Layout */
 .u--row {
   display: flex;

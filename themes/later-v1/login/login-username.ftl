@@ -14,8 +14,8 @@
           method="post">
           <#if !usernameHidden??>
             <div class="o--formWrapper--lg ${properties.kcFormGroupClass!}">
-              <@inputPrimary.kw autocomplete=realm.loginWithEmailAllowed?string("email", "username" ) autofocus=true
-                disabled=usernameEditDisabled?? invalid=["username", "password" ] name="username" type="text"
+              <@inputPrimary.kw autocomplete="off" autofocus=true
+                disabled=usernameEditDisabled?? invalid=["username", "password" ] name="username" type="email"
                 value=(login.username)!''>
                 <@labelUsername.kw />
               </@inputPrimary.kw>
@@ -51,7 +51,7 @@
       <#elseif section="info">
         <#if realm.password && realm.registrationAllowed && !registrationDisabled??>
           <p class="u--text--center" id="kc-registration">
-            ${msg("noAccount")} <a tabindex="6" href="${url.registrationUrl}">${msg("doRegister")}</a>
+            ${msg("noAccount")} <a tabindex="6" href="${properties.registrationUrl}">${msg("doRegister")}</a>
           </p>
         </#if>
         <#elseif section="socialProviders">

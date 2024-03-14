@@ -1,4 +1,4 @@
-<#macro kw>
+<#macro kw heading="Log In">
   <div class="o--wrapper">
     <header class="o--header">
       <div class="o--container tLK--headerContainer">
@@ -6,7 +6,7 @@
           <a href="https://later.com" class="o--logo" target="_self" rel="" title="Later.com">
             <div class="o--logo__img"></div>    
           </a>
-          <h3 class="o--logo__title">Log In</h3>
+          <h3 class="o--logo__title">${heading}</h3>
         </div>
         <h3 class="o--header__action">
           New to Later? <a class="u--inline u--p__l__xs" href="/user/signup">Create&nbsp;an&nbsp;Account</a>
@@ -18,13 +18,13 @@
         <div class="tLK--card">
           <#nested>
         </div>
-        <#-- Note: Rob we need to conditionally show the below cards baed on UTM/Camapign Flow -->
 
+        
         <#-- Default Feature Card -->
-        <#-- <div class="tLK--card tLK--card--featured"></div> -->
+        <div class="tLK--card tLK--card--featured u--hide"></div>
 
         <#-- Testimonial Feature Card -->
-        <#-- <div class="tLK--card tLK--card--testimonial">
+        <div class="tLK--card tLK--card--testimonial u--hide">
           <p class="tLK--card__title--testimonial">
             Plan &amp; schedule posts. Drive traffic &amp; sales with Linkin.bio. Collab with creators &amp; brands.
           </p>
@@ -33,10 +33,10 @@
             <p class="u--text--bold u--m__b__0">Megan White</p>
             <p class="u--text--bold">Artifact Uprising</p>
           </div>
-        </div> -->
+        </div>
 
         <#-- Campaigns Feature Card -->
-        <#-- <div class="tLK--card tLK--card--campaign">
+        <div class="tLK--card tLK--card--campaign u--hide">
           <div class="u--p__l__lg u--p__r__lg">
             <p class="tLK--card__title">OCE all socials</p>
             <p class="u--text--light">By The Shop</p>
@@ -47,10 +47,10 @@
               <img alt="Campaign image" class="o--media" src="https://s3.amazonaws.com/mavrck-dev01-us-east-1-creator-content/activity_images/50342_1700770150866.png">
             </figure>
           </div>
-        </div> -->
+        </div>
 
         <#-- Contributor Feature Card -->
-        <div class="tLK--card tLK--card--invite">
+        <div class="tLK--card tLK--card--invite u--hide">
           <p class="tLK--card__title u--m__b__sm u--text--bold u--text--lg">Social Media Management<br>Made Easy</p>
           <p class="u--text--base">
             Later is your one-stop shop for social media management &amp; expert advice.

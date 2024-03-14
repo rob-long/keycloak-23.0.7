@@ -56,14 +56,9 @@
             ${msg("rememberMe")}
           </@checkboxPrimary.kw>
         </#if>
-        <#if realm.resetPasswordAllowed>
-          <@linkPrimary.kw href=url.loginResetCredentialsUrl>
-            <span class="text-sm">${msg("doForgotPassword")}</span>
-          </@linkPrimary.kw>
-        </#if>
 
-        <div class="pt-4" >
-          <@buttonPrimary.kw name="login" type="submit">
+        <div class="o--formSubmit" >
+          <@buttonPrimary.kw name="login" type="submit" id="loginButton">
             ${msg("doLogIn")}
           </@buttonPrimary.kw>
         </div>
@@ -76,7 +71,7 @@
     <#if realm.password && realm.registrationAllowed && !registrationDisabled??>
       <p class="u--text--center">
         ${msg("noAccount")}
-        <@linkPrimary.kw href=url.registrationUrl>
+        <@linkPrimary.kw href=properties.registrationUrl>
           ${msg("doRegister")}
         </@linkPrimary.kw>
       </p>
