@@ -57,3 +57,7 @@ form[data-ember-action] {
   box-shadow: none;
   border: none;
 }
+
+.u--hide {
+  display: none !important;
+}

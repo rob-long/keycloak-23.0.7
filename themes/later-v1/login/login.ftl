@@ -58,7 +58,7 @@
         </#if>
 
         <div class="o--formSubmit" >
-          <@buttonPrimary.kw name="login" type="submit">
+          <@buttonPrimary.kw name="login" type="submit" id="loginButton">
             ${msg("doLogIn")}
           </@buttonPrimary.kw>
         </div>
