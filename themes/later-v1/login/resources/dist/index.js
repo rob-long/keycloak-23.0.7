@@ -39,3 +39,9 @@ if (element) {
   }
 }
 
+if (utmSource === 'campaign' || utmSource === 'mavrck') {
+  const campaignElement = document.querySelector('#mavrck-welcome');
+  if (campaignElement) {
+    campaignElement.classList.remove('u--hide');
+  }
+}

@@ -7,6 +7,7 @@
 <@layout.registrationLayout
   displayInfo=true
   showForgotPassword=false
+  heading=msg("emailForgotTitle")
   displayMessage=!messagesPerField.existsError("username");
   section
 >

@@ -34,11 +34,10 @@
               <h1 class="tLK--card__title">
                 <#nested "header">
               </h1>
-              <#-- Note: Rob we need to show this paragraph for campaigns login -->
-              <#-- <p class="u--text--light u--m__t__0 u--m__b__lg">
+              <p id="mavrck-welcome" class="u--hide u--text--light u--m__t__0 u--m__b__lg">
                 Mavrck teamed up with Later! Apply to this campaign through Later to access our all-in-one creator experience.
                 <a href="https://www.later.com/" target="_blank" rel="noopener">Learn More</a>
-              </p> -->
+              </p>
             <#else>
               <@username.kw />
             </#if>
